@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratheep Raj</title>
+    <link rel="icon" href="Pratheep.jpg">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0a3d62;
+            padding: 15px 0;
+            z-index: 10;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center; margin-left:60px;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        section {
+            max-width: 900px;
+            background: white;
+            margin: 120px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0a3d62;
+            border-left: 5px solid #f1c40f;
+            padding-left: 10px;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .skills-list, .lang-list {
+            list-style: square;
+            padding-left: 20px;
+        }
+
+        .contact p, .personal p {
+            line-height: 1.6;
+        }
+        /* Smooth fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Apply animation to all sections */
+        section {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Navbar slide-down animation */
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        nav {
+            animation: slideDown 0.6s ease-out;
+        }
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        /* Mobile Hamburger Menu */
+        .hamburger {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                background: #0a3d62;
+                width: 100%;
+                display: none;
+                margin-left: 0;
+                padding-bottom: 15px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <div style="position:absolute; left:20px; top:8px;">
+            <img src="Pratheep.jpg" alt="Logo" style="height:45px; width:45px; border-radius:50%; object-fit:cover;" />
+        </div>
+        <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</div>
+        <div style="position:absolute; left:20px; top:8px;">
+            <img src="Pratheep.jpg" alt="Logo" style="height:45px; width:45px; border-radius:50%; object-fit:cover;" />
+        </div>
+        <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> +94 75 445 9277</p>
+        <p><strong>Email:</strong> pratheeprajk123@gmail.com</p>
+        <p><strong>Location:</strong> Colombo, Sri Lanka</p>
+    </section>
+
+    <section id="profile" class="personal">
+        <h2>Personal Profile</h2>
+        <p>Motivated and adaptable graduate with a background in Aerospace Engineering, eager to contribute strong analytical, problem‑solving, and teamwork skills across diverse roles. Quick to learn new concepts and technologies, with the ability to work effectively under pressure and deliver quality results. Known for being reliable, detail‑oriented, and committed to continuous professional growth.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="two-columns">
+            <div>
+                <ul class="skills-list">
+                    <li>Aircraft Systems (Basic)</li>
+                    <li>UAV Design & Simulation</li>
+                    <li>Flight Operations</li>
+                    <li>Technical Documentation & Report Writing</li>
+                    <li>Python (Basic, Engineering Applications)</li>
+                    <li>Critical Thinking</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Languages</h3>
+                <ul class="lang-list">
+                    <li>Tamil (Fluent)</li>
+                    <li>English (B2)</li>
+                    <li>German (A1)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+
+        <h3>Internship – Project Trainee | May 2021 – June 2021</h3>
+        <p><strong>Branistar Aerospace Systems | Chennai, India</strong></p>
+        <ul>
+            <li>Assisted in research, testing, and analysis of aerospace components and performance.</li>
+            <li>Contributed to design, simulation, and prototyping of aerospace mechanisms.</li>
+            <li>Prepared technical documentation and reports aligned with industry standards.</li>
+        </ul>
+
+        <h3>Media Coordinator | 2022 – 2024</h3>
+        <p><strong>Mercy Ark Church of India | Trichy, India</strong></p>
+        <ul>
+            <li>Coordinated cross‑functional teams and managed project workflows.</li>
+            <li>Improved teamwork, leadership, and communication through stakeholder engagement.</li>
+            <li>Gained experience in planning, coordination, and execution relatable to aviation operations.</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <h3>B.Tech Aerospace Engineering | 2018 – 2022</h3>
+        <p><strong>Karunya University | Coimbatore, India</strong></p>
+        <p>Developed knowledge in aircraft systems, flight operations, and aerospace materials; skilled in technical analysis, teamwork, and problem‑solving.</p>
+    </section>
+
+</body>
+</html>
